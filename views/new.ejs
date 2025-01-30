@@ -1,0 +1,27 @@
+<!-- views/new.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Planet</title>
+  </head>
+  <body>
+    <h1>Create a New Planet!</h1>
+    <form action='/planets' method="POST">
+     <label for="name">Name Your Planet:</label>
+     <input type="text" name="name" id="name"/>
+
+     <label for="description">Describe your planet?:</label>
+     <input type="text" name="description" id="description">
+
+     <label for="size">How large is your planet?:</label>
+     <input type="text" name="size" id="size">
+
+     <label for="hasWater">Does your planet have water?:</label>
+     <input type="checkbox" name="hasWater" id="hasWater">
+
+     <button type="submit">Create Planet</button>
+    </form>
+  </body>
+</html>
