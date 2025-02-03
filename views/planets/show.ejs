@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= planet.name %> Show Page</title>
+  </head>
+  <body>
+    <h1><%= planet.name %></h1>
+    <% if (planet.hasWater) { %>
+        <p>This planet may be able to sustain human life!</p>
+      <% } else { %>
+        <p>This planet CANNOT sustain human life!</p>
+      <% } %>
+
+      <h3>Description: <%= planet.description %></h3>
+      <h3>Planet Size: <%= planet.size %> miles wide!</h3>
+
+      <form action="/planets/<%= planet._id%>?_method=DELETE" method="POST">
+        <button type="submit">Destroy <%= planet.name %></button>
+        
+      </form>
+      <a href="/planets/<%= planet._id %>/edit">Edit <%= planet.name %></a>
+
+      <a href="/planets/">Back to the Solar System</a>
+
+  </body>
+</html>

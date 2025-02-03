@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Planet</title>
+  </head>
+  <body>
+    
+    <h1>Edit <%= planet.name %></h1>
+    <form action="/planets/<%=planet._id%>?_method=PUT" method="POST"></form>
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= planet.name %>" />
+  
+      <label for="hasWater">Does it have water?</label>
+      <input type="checkbox" name="hasWater" <% if (planet.hasWater) { %>checked<% } %> />
+
+     <label for="size">How large is your planet?:</label>
+     <input type="text" name="size" id="size">
+
+
+    
+      <button type="submit">Update <%= planet.name %></button>
+    </form>
+    <a href="/planets">Back to Solar System</a>
+  </body>
+</html>

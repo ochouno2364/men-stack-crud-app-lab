@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Planets</title>
+  </head>
+
+  <body>
+    <h1>The Solar System</h1>
+    <ul>
+        <% planets.forEach(planet => { %>
+            <li><a href="/planets/<%= planet._id %>">
+                <%= planet.name %>
+            </a></li>
+        <% }); %>
+      </ul>
+
+      <a href="/">Home Page</a>
+      <a href="/planets/new">Create New Planet</a>
+    
+    
+  </body>
+  
+</html>
