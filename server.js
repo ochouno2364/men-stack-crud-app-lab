@@ -56,16 +56,16 @@ res.redirect('/planets');
 })
 
 // (U)PDATE ROUTE
-// app.put('/planets/:planetId', async (req, res)=> {
-//     console.log(req.params.planetId, req.body);
-// // if (req.body.hasWater === 'on') {
-// //     req.body.hasWater = true;
-// // } else {
-// //     req.body.hasWater = false;
-// // }
-// // await Planet.findByIdAndUpdate(req.params.planetId, req.body);
-// // res.redirect(`/planets/${req.params.planetId}`)
-// });
+app.put('/planets/:planetId', async (req, res)=> {
+    
+if (req.body.hasWater === 'on') {
+    req.body.hasWater = true;
+} else {
+    req.body.hasWater = false;
+}
+await Planet.findByIdAndUpdate(req.params.planetId, req.body);
+res.redirect(`/planets/${req.params.planetId}`)
+});
 
 
 // (C)REATE ROUTE
