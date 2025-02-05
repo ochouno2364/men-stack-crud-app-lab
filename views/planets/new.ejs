@@ -2,27 +2,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+        body {
+            background-image: url('https://www.pbs.org/wgbh/nova/media/images/Solar_System_Blank_Series_Image.width-2000.jpg');
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            font: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        h1 {
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label {
+            color: #f5deb3;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+    
+        </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a Planet</title>
   </head>
   <body>
+    
     <h1>Create a New Planet!</h1>
+<div class="form-container">
     <form action='/planets' method="POST">
      <label for="name">Name Your Planet:</label>
      <input type="text" name="name" id="name"/>
+     <br>
 
      <label for="description">Describe your planet?:</label>
-     <input type="text" name="description" id="description">
+     <input type="text" name="description" id="description"> 
+     <br>
+
 
      <label for="size">How large is your planet?:</label>
      <input type="text" name="size" id="size">
+     <br>
 
      <label for="hasWater">Does your planet have water?:</label>
      <input type="checkbox" name="hasWater" id="hasWater">
+     <br>
 
      <button type="submit">Create Planet</button>
     </form>
+</div>
   </body>
   <a href="/">Home Page</a>
   <a href="/planets">Back to the Solar System</a>

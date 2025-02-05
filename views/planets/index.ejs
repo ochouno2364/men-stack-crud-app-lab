@@ -3,6 +3,46 @@
 <html lang="en">
 
   <head>
+  <style>
+    body {
+        background-image: url('https://cff2.earth.com/uploads/2023/03/08162143/Solar-system-3-scaled.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h1 {
+        color: rgb(245, 242, 245);
+        text-shadow: 5%;
+        text-decoration: double;
+        text-decoration-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .list-container {
+        color: whitesmoke;
+        font-size: x-large;
+        display: flex;
+        align-content: center ;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5px;
+        
+    }
+    .a-container {
+        color: whitesmoke;
+        display: inline-flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        
+    }
+   
+
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Planets</title>
@@ -10,6 +50,7 @@
 
   <body>
     <h1>The Solar System</h1>
+    <div class="list-container">
     <ul>
         <% planets.forEach(planet => { %>
             <li><a href="/planets/<%= planet._id %>">
@@ -17,10 +58,11 @@
             </a></li>
         <% }); %>
       </ul>
-
+    </div>
+    <div class="a-container">
       <a href="/">Home Page</a>
       <a href="/planets/new">Create New Planet</a>
-    
+    </div>
     
   </body>
   

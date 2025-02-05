@@ -9,8 +9,7 @@ const planetSchema = new mongoose.Schema({
     description: {type: String, required: true},
     size: {type: Number, required: true},
     hasWater: {type: Boolean},
-    image: String,
-
+    
 });
 
 
